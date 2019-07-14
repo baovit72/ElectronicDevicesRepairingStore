@@ -43,16 +43,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUIUtility.cs" />
     <Compile Include="GUI_NhanSuaChua.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI_NhanSuaChua.Designer.cs">
       <DependentUpon>GUI_NhanSuaChua.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_NhapThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NhapThietBi.Designer.cs">
+      <DependentUpon>GUI_NhapThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_SuaChua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_SuaChua.Designer.cs">
+      <DependentUpon>GUI_SuaChua.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI_NhanSuaChua.resx">
       <DependentUpon>GUI_NhanSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_NhapThietBi.resx">
+      <DependentUpon>GUI_NhapThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_SuaChua.resx">
+      <DependentUpon>GUI_SuaChua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -39,8 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_HoaDon.cs" />
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_NhanHieu.cs" />
+    <Compile Include="DAL_NhapThietBi.cs" />
+    <Compile Include="DAL_SuaChua.cs" />
     <Compile Include="DAL_ThietBiSuaChua.cs" />
     <Compile Include="DAL_YeuCauSuaChua.cs" />
     <Compile Include="DBconnection.cs" />

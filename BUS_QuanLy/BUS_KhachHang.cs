@@ -38,7 +38,7 @@ namespace BUS_QuanLy
 
         public List<string> getAllCustomerNames()
         {
-            List<string> names = getAllCustomers().Select(cus => cus.HoTen).ToList();
+            List<string> names = getAllCustomers().Select(cus => cus.ID.ToString()+"/" + cus.HoTen).ToList();
             return names;
         }
 

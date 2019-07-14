@@ -121,5 +121,28 @@ namespace DAL_QuanLy
             return true;
         }
 
+        public bool executeDeleteQuery(String _query, SqlParameter[] sqlParameters)
+        {
+            SqlCommand myCommand = new SqlCommand();
+            try
+            {
+                myCommand.Connection = openConnection();
+                myCommand.CommandText = _query;
+                myCommand.Parameters.AddRange(sqlParameters);
+                myAdapter.DeleteCommand = myCommand;
+                myCommand.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                Console.Write("Error - Connection.executeDeleteQuery - Query: " + _query + " \nException: " + e.StackTrace.ToString());
+                return false;
+            }
+            finally
+            {
+
+            }
+            return true;
+        }
+
     }
 }
