@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>GUI_QuanLy</RootNamespace>
     <AssemblyName>GUI_QuanLy</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,9 +32,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>crosshill_icon_10_e1478398880947_biW_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -44,6 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GUIUtility.cs" />
+    <Compile Include="GUI_DayStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DayStatistics.Designer.cs">
+      <DependentUpon>GUI_DayStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_MonthStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_MonthStatistics.Designer.cs">
+      <DependentUpon>GUI_MonthStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_NhanSuaChua.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,8 +80,20 @@
     <Compile Include="GUI_SuaChua.Designer.cs">
       <DependentUpon>GUI_SuaChua.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_Tracuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Tracuu.Designer.cs">
+      <DependentUpon>GUI_Tracuu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI_DayStatistics.resx">
+      <DependentUpon>GUI_DayStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_MonthStatistics.resx">
+      <DependentUpon>GUI_MonthStatistics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_NhanSuaChua.resx">
       <DependentUpon>GUI_NhanSuaChua.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +103,9 @@
     <EmbeddedResource Include="GUI_SuaChua.resx">
       <DependentUpon>GUI_SuaChua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Tracuu.resx">
+      <DependentUpon>GUI_Tracuu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,7 +114,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,6 +136,12 @@
       <Project>{bc4680b7-2e02-41c7-882b-d95e4ffb684e}</Project>
       <Name>DTO_QuanLy</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="crosshill_icon_10_e1478398880947_biW_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

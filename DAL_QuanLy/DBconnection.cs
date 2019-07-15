@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
-using System.Data;
+using System.Data; 
 namespace DAL_QuanLy
 {
     class DBconnection
@@ -18,7 +18,7 @@ namespace DAL_QuanLy
         public DBconnection()
         {
             myAdapter = new SqlDataAdapter();
-            conn = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = REPAIRINGSTORE; Integrated Security = True");
+            conn = new SqlConnection("Data Source = localhost\\SQLEXPRESS; Initial Catalog = REPAIRINGSTORE; Integrated Security = True");
         }
 
         ///<method>

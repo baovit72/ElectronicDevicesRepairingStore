@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_SuaChua));
             this.listRequest = new System.Windows.Forms.ListBox();
             this.lbRequest = new System.Windows.Forms.Label();
             this.cbOptRepair = new System.Windows.Forms.CheckBox();
@@ -58,10 +59,20 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dayChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tìmKiếmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opt1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tìmTheoTênKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tìmTheoTênThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listRequest
@@ -80,11 +91,12 @@
             // 
             this.lbRequest.AutoSize = true;
             this.lbRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRequest.Location = new System.Drawing.Point(12, 19);
+            this.lbRequest.Location = new System.Drawing.Point(12, 46);
             this.lbRequest.Name = "lbRequest";
             this.lbRequest.Size = new System.Drawing.Size(258, 25);
             this.lbRequest.TabIndex = 1;
             this.lbRequest.Text = "Danh sách các yêu cầu";
+            this.lbRequest.Click += new System.EventHandler(this.lbRequest_Click);
             // 
             // cbOptRepair
             // 
@@ -374,12 +386,87 @@
             this.button4.Text = "Xuất hoá đơn";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FloralWhite;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thốngKêToolStripMenuItem,
+            this.tìmKiếmToolStripMenuItem,
+            this.thôngTinToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1094, 24);
+            this.menuStrip1.TabIndex = 12;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dayChartToolStripMenuItem,
+            this.thốngKêThángToolStripMenuItem});
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            // 
+            // dayChartToolStripMenuItem
+            // 
+            this.dayChartToolStripMenuItem.Name = "dayChartToolStripMenuItem";
+            this.dayChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dayChartToolStripMenuItem.Text = "Thống kê ngày";
+            this.dayChartToolStripMenuItem.Click += new System.EventHandler(this.dayChartToolStripMenuItem_Click);
+            // 
+            // thốngKêThángToolStripMenuItem
+            // 
+            this.thốngKêThángToolStripMenuItem.Name = "thốngKêThángToolStripMenuItem";
+            this.thốngKêThángToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thốngKêThángToolStripMenuItem.Text = "Thống kê tháng";
+            this.thốngKêThángToolStripMenuItem.Click += new System.EventHandler(this.thốngKêThángToolStripMenuItem_Click);
+            // 
+            // tìmKiếmToolStripMenuItem
+            // 
+            this.tìmKiếmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opt1ToolStripMenuItem,
+            this.tìmTheoTênKháchHàngToolStripMenuItem,
+            this.tìmTheoTênThiếtBịToolStripMenuItem});
+            this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            this.tìmKiếmToolStripMenuItem.Click += new System.EventHandler(this.tìmKiếmToolStripMenuItem_Click);
+            // 
+            // opt1ToolStripMenuItem
+            // 
+            this.opt1ToolStripMenuItem.Name = "opt1ToolStripMenuItem";
+            this.opt1ToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.opt1ToolStripMenuItem.Text = "Tìm theo mã hoá đơn";
+            this.opt1ToolStripMenuItem.Click += new System.EventHandler(this.opt1ToolStripMenuItem_Click);
+            // 
+            // tìmTheoTênKháchHàngToolStripMenuItem
+            // 
+            this.tìmTheoTênKháchHàngToolStripMenuItem.Name = "tìmTheoTênKháchHàngToolStripMenuItem";
+            this.tìmTheoTênKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.tìmTheoTênKháchHàngToolStripMenuItem.Text = "Tìm theo tên khách hàng";
+            this.tìmTheoTênKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.tìmTheoTênKháchHàngToolStripMenuItem_Click);
+            // 
+            // tìmTheoTênThiếtBịToolStripMenuItem
+            // 
+            this.tìmTheoTênThiếtBịToolStripMenuItem.Name = "tìmTheoTênThiếtBịToolStripMenuItem";
+            this.tìmTheoTênThiếtBịToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.tìmTheoTênThiếtBịToolStripMenuItem.Text = "Tìm theo tên thiết bị";
+            this.tìmTheoTênThiếtBịToolStripMenuItem.Click += new System.EventHandler(this.tìmTheoTênThiếtBịToolStripMenuItem_Click);
+            // 
+            // thôngTinToolStripMenuItem
+            // 
+            this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
+            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.thôngTinToolStripMenuItem.Text = "Thông tin";
+            this.thôngTinToolStripMenuItem.Click += new System.EventHandler(this.thôngTinToolStripMenuItem_Click);
+            // 
             // GUI_SuaChua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(1094, 607);
+            this.ClientSize = new System.Drawing.Size(1094, 634);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -392,12 +479,15 @@
             this.Controls.Add(this.cbOptRepair);
             this.Controls.Add(this.lbRequest);
             this.Controls.Add(this.listRequest);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GUI_SuaChua";
-            this.Text = "GUI_SUACHUA";
+            this.Text = "ĐIỆN TỬ HỒ SƠN";
             this.Load += new System.EventHandler(this.GUI_SuaChua_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -406,6 +496,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,5 +535,14 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thôngTinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dayChartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêThángToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opt1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tìmTheoTênKháchHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tìmTheoTênThiếtBịToolStripMenuItem;
     }
 }

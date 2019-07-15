@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BUS_QuanLy</RootNamespace>
     <AssemblyName>BUS_QuanLy</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_NhanHieu.cs" />
     <Compile Include="BUS_NhapThietBi.cs" />
+    <Compile Include="BUS_Statistics.cs" />
     <Compile Include="BUS_SuaChua.cs" />
     <Compile Include="BUS_ThietBiSuaChua.cs" />
     <Compile Include="BUS_YeuCauSuaChua.cs" />

@@ -158,7 +158,7 @@
             this.MinimizeBox = false;
             this.Name = "GUI_NhapThietBi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "GUI_NhapThietBi";
+            this.Text = "Nhập thiết bị ";
             this.Load += new System.EventHandler(this.GUI_NhapThietBi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

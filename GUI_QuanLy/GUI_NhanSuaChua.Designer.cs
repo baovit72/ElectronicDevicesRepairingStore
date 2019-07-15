@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_NhanSuaChua));
             this.tbDiaChi = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cbKhachHang = new System.Windows.Forms.ComboBox();
@@ -275,10 +276,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GUI_NhanSuaChua";
-            this.Text = "Form1";
+            this.Text = "Nhận sửa chữa";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GUI_NhanSuaChua_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

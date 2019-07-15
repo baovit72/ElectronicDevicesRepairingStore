@@ -255,7 +255,10 @@ namespace GUI_QuanLy
 
         private void listRequest_DoubleClick(object sender, EventArgs e)
         {
-
+            if(selectedHoaDon != null)
+            {
+                MessageBox.Show("Mã yêu cầu :" + selectedHoaDon.ID);
+            }
         }
 
         private void listDevices_DoubleClick(object sender, EventArgs e)
@@ -306,5 +309,57 @@ namespace GUI_QuanLy
 
             }
         }
+
+        private void lbRequest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Developed by Bao Ho @UIT __ \r\nGithub: https://github.com/baovit72/ElectronicDevicesRepairingStore");
+        }
+
+        private void dayChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form fmStatistics = new GUI_DayStatistics();
+            fmStatistics.ShowDialog();
+        }
+
+        private void thốngKêThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form fmStatistics = new GUI_MonthStatistics();
+            fmStatistics.ShowDialog();
+        }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void opt1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form fmSearch = new GUI_Tracuu(this, 1, hoaDons);
+            fmSearch.ShowDialog();
+        }
+        public void ChangeSelectedHoaDon(int id)
+        {
+            if (id < 0) return;
+            listRequest.SelectedIndex = id;
+            selectedHoaDon = hoaDons[listRequest.SelectedIndex];
+        }
+
+        private void tìmTheoTênKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form fmSearch = new GUI_Tracuu(this, 2, hoaDons);
+            fmSearch.ShowDialog();
+        }
+
+        private void tìmTheoTênThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form fmSearch = new GUI_Tracuu(this, 3, hoaDons);
+            fmSearch.ShowDialog();
+        }
+        
     }
 }
